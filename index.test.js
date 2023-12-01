@@ -1,8 +1,9 @@
 const track = require('./tracker')
 const mod = require('.')
+const { dataMock } = require('./testConstants')
 
 jest.mock('./data', () => {
-  track('data-mock')
+  track(dataMock)
   return {isMock: true}
 })
 
